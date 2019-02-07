@@ -5,8 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 import edu.microservices.springboot.car.model.Car;
 import edu.microservices.springboot.car.service.CarService;
@@ -23,14 +24,14 @@ public class CarWebController {
 		this.carService = carService;
 	}
 
-	@RequestMapping(method = RequestMethod.POST)
+	@PostMapping
 	public String addToCars(Car car) {
 		color = car.getColor();
 		carService.saveCar(car);
 		return "redirect:/carList";
 	}
 
-	@RequestMapping(method = RequestMethod.GET)
+	@GetMapping
 	public String getCarsByColor(Model model) {
 		List<Car> cars = carService.findByColor(color);
 		if (cars != null) {

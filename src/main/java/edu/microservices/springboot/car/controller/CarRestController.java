@@ -39,28 +39,45 @@ public class CarRestController {
 	/*
 	 * Using @PathVariable
 	 */
-	@RequestMapping(value = "/make/{make}/color/{color}", method = RequestMethod.GET)
-	public ResponseEntity<Car> getPing(@PathVariable("make") String make, @PathVariable("color") String color) {
+	@RequestMapping(value = "/{carId}", method = RequestMethod.GET)
+	public ResponseEntity<Car> getCarById(@PathVariable("carId") Long carId) {
+
+		// STUB service method to find car by car Id
 		Car car = new Car();
-		car.setMake(make);
-		car.setColor(color);
+		car.setId(carId);
+		car.setMake("Honda");
+		car.setColor("black");
+
 		return new ResponseEntity<Car>(car, HttpStatus.OK);
 	}
 
+	/*
+	 * Example PUT
+	 */
 	@RequestMapping(method = RequestMethod.PUT)
-	public ResponseEntity<?> update() {
-		return new ResponseEntity<String>("PUT update success", HttpStatus.OK);
+	public ResponseEntity<?> updateCar(@RequestBody Car car) {
+		System.out.println("Updating car with: " + car);
+		// STUB service method to update car
+		return new ResponseEntity<Car>(car, HttpStatus.OK);
 	}
 
+	/*
+	 * Example POST
+	 */
 	@RequestMapping(method = RequestMethod.POST)
-	public ResponseEntity<?> insert(@RequestBody Car car) {
-		System.out.println("Create car: " + car);
-		return new ResponseEntity<String>("POST insert success", HttpStatus.CREATED);
+	public ResponseEntity<?> addNewCar(@RequestBody Car car) {
+		System.out.println("Creating car with: " + car);
+		// STUB service method to create car
+		return new ResponseEntity<Car>(car, HttpStatus.CREATED);
 	}
 
+	/*
+	 * Example DELETE
+	 */
 	@RequestMapping(method = RequestMethod.DELETE)
 	@ResponseStatus(HttpStatus.NO_CONTENT)
-	public ResponseEntity<?> delete() {
+	public ResponseEntity<?> deleteCar() {
+		// STUB service method to delete car
 		return new ResponseEntity<String>("DELETE success", HttpStatus.OK);
 	}
 

@@ -26,8 +26,8 @@ Here is a [good overview of H2](http://www.springboottutorial.com/spring-boot-an
 1. [http://localhost:8080](http://localhost:8080)
 
 ##### Rest APIs: 
-1. [http://localhost:8080/cars/attributes?color=blue](http://localhost:8080/cars/attributes?color=blue)
-2. [http://localhost:8080/cars/make/toyota/color/blue](http://localhost:8080/cars/make/toyota/color/blue)
+1. http://localhost:8080/cars/attributes?color=black 
+2. http://localhost:8080/cars/23
 3. DELETE http://localhost:8080/cars
 4. PUT http://localhost:8080/cars
 5. POST http://localhost:8080/cars
