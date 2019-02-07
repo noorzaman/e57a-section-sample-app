@@ -1,0 +1,13 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+/target/
+.settings/
+/
+.classpath
+.project
+.springBeans
+WebContent/META-INF/MANIFEST.MF
+.DS_Store
+bin/
+.externalToolBuilders/
+/.clover/
+src/main/config/SQLPowerAchitectDatabaseModel.architect~
