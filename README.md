@@ -22,8 +22,15 @@ Here is a [good overview of H2](http://www.springboottutorial.com/spring-boot-an
 - mvn spring-boot:run
 
 ### Application URL
-- web app: [http://localhost:8080](http://localhost:8080)
-- Rest API: [http://localhost:8080/cars/attributes?color=blue](http://localhost:8080/cars/attributes?color=blue)
+##### Web app: 
+1. [http://localhost:8080](http://localhost:8080)
+
+##### Rest APIs: 
+1. [http://localhost:8080/cars/attributes?color=blue](http://localhost:8080/cars/attributes?color=blue)
+2. [http://localhost:8080/cars/make/toyota/color/blue](http://localhost:8080/cars/make/toyota/color/blue)
+3. DELETE http://localhost:8080/cars
+4. PUT http://localhost:8080/cars
+5. POST http://localhost:8080/cars
 
 ### Enabling H2 console
 1. Add the following to your applicaiton.properties: spring.h2.console.enabled=true 
