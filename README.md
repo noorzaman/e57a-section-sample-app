@@ -67,6 +67,11 @@ Start container from image
 docker run -p 8080:8080 e-57a-section/sample-service:v2
 ```
 
+Access application website
+```
+http://localhost:8080/carList
+```
+
 ## Authors
 
 * **Louis Savoldy** - with content from e57a's lectures (Vitaly Yurik) and Spring Microservices in Action (John Carnell)
