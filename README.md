@@ -48,12 +48,12 @@ View Docker images
 docker images
 
 REPOSITORY                       TAG                 IMAGE ID            CREATED             SIZE
-e-57a-section/sample-service     with_docker         eaa68861fdd0        About an hour ago   142MB
+e-57a-section/sample-service     v2                  eaa68861fdd0        About an hour ago   142MB
 ```
 
 Start container from image
 ```
-docker run e-57a-section/sample-service
+docker run e-57a-section/sample-service:v2
 ```
 
 ## Authors
