@@ -21,28 +21,41 @@ An H2 embedded (in project) in-memory simple relational database that developers
 
 Here is a [good overview of H2](http://www.springboottutorial.com/spring-boot-and-h2-in-memory-database)
 
+#### v2 : Includes Docker
+This TAG contains contents of v1 + Docker file, run script, and Maven Spotify Docker plugin
+
 #### (additional TAGs will appear here)
 
 ### Prerequisites
 
 1. Java 1.8
+2. Docker
 
 ### Installing / Running
 
 You can then clone a specific TAG (e.g., -b v1 is for tag v1) with the following command:
 ```
-git clone -b v1 --single-branch https://github.com/LouisSavoldy/e57a-section-sample-app.git
+git clone -b v2 --single-branch https://github.com/LouisSavoldy/e57a-section-sample-app.git
 ```
 
-Packaging the application
+Create a Docker image
 ```
-mvn clean package
+mvn clean package docker:build
 ```
 
-Running the applicaiton
+View Docker images
 ```
-mvn spring-boot:run
+docker images
+
+REPOSITORY                       TAG                 IMAGE ID            CREATED             SIZE
+e-57a-section/sample-service     with_docker         eaa68861fdd0        About an hour ago   142MB
 ```
+
+Start container from image
+```
+docker run e-57a-section/sample-service
+```
+
 ## Authors
 
 * **Louis Savoldy** - with content from e57a's lectures (Vitaly Yurik) and Spring Microservices in Action (John Carnell)
