@@ -1,10 +1,10 @@
 # Project Title
 
-I will use this tutorial to explore/demo topics presented by Vitaly within E-57a's lectures.  As I add additional functionality, I will TAG the version with a description below.
+I will use this tutorial to explore/demo topics presented by Vitaly within E-57a's lectures.  As I add additional functionality, I will TAG the version with a description below.  To get the latest (includes all functionality), just clone the current version.
 
 ## Getting Started
 
-First, decide on which TAG you are interested in.  
+Either clone the latest version or decide on which TAG you are interested in.  The latest version includes all functionality.
 
 ### TAG descriptions:
 #### v1 : Spring Boot app with JPA and H2
