@@ -4,9 +4,7 @@ I will use this tutorial to explore/demo topics presented by Vitaly within E-57a
 
 ## Getting Started
 
-First, decide on which TAG you are interested in.  You can then clone a specific branch with the following command:
-
-git clone -b v1 --single-branch https://github.com/LouisSavoldy/e57a-section-sample-app.git
+First, decide on which TAG you are interested in.  
 
 ### TAG descriptions:
 #### v1 : Spring Boot app with JPA and H2
@@ -23,11 +21,18 @@ An H2 embedded (in project) in-memory simple relational database that developers
 
 Here is a [good overview of H2](http://www.springboottutorial.com/spring-boot-and-h2-in-memory-database)
 
+#### (additional TAGs will appear here)
+
 ### Prerequisites
 
 1. Java 1.8
 
 ### Installing / Running
+
+You can then clone a specific TAG (e.g., -b v1 is for tag v1) with the following command:
+```
+git clone -b v1 --single-branch https://github.com/LouisSavoldy/e57a-section-sample-app.git
+```
 
 Packaging the application
 ```
