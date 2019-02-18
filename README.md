@@ -1,7 +1,16 @@
-# e57a-section-boot-jpa
+# Project Title
 
-# Contents
-This  project demos a very Spring Boot project with the the following features:
+I will use this tutorial to explore/demo topics presented by Vitaly within E-57a's lectures.  As I add additional functionality, I will TAG the version with a description below.
+
+## Getting Started
+
+First, decide on which TAG you are interested in.  You can then clone a specific branch with the following command:
+
+git clone -b v1 --single-branch https://github.com/LouisSavoldy/e57a-section-sample-app.git
+
+### TAG descriptions:
+#### v1 : Spring Boot app with JPA and H2
+This  project demos a very simple Spring Boot project with the the following features:
 1. H2 in mememory database integration
 2. JPA
 3. Spring @Repository
@@ -10,30 +19,25 @@ This  project demos a very Spring Boot project with the the following features:
 5. Spring @RestConstroller
 6. Spring devtools
 
-## H2
 An H2 embedded (in project) in-memory simple relational database that developers use for demoing/trying out code that requires a database.  Spring Boot takes the H2 DB to the next level with its opinionated nature of configuration for H2.  With only adding the H2 and JPA Spring dependencies add,  Spring will generate/load DDL from the scanned Entities in your project to create the DB tables.  It also takes care of the connection setup.  You only need to be concerned with writing your JPA entities and Spring Repositories.
 
 Here is a [good overview of H2](http://www.springboottutorial.com/spring-boot-and-h2-in-memory-database)
 
-### Packaging the application
-- mvn clean package
+### Prerequisites
 
-### Running the applicaiton
-- mvn spring-boot:run
+1. Java 1.8
 
-### Application URL
-##### Web app: 
-1. [http://localhost:8080](http://localhost:8080)
+### Installing / Running
 
-##### Rest APIs: 
-1. http://localhost:8080/cars/attributes?color=black 
-2. http://localhost:8080/cars/23
-3. DELETE http://localhost:8080/cars
-4. PUT http://localhost:8080/cars
-5. POST http://localhost:8080/cars
+Packaging the application
+```
+mvn clean package
+```
 
-### Enabling H2 console
-1. Add the following to your applicaiton.properties: spring.h2.console.enabled=true 
-2. Navigate to: http://localhost:8080/h2-console
-3. Set the JDBC URL to: jdbc:h2:mem:testdb
-4. Click 'Connect'
+Running the applicaiton
+```
+mvn spring-boot:run
+```
+## Authors
+
+* **Louis Savoldy** - with content from e57a's lectures (Vitaly Yurik) and Spring Microservices in Action (John Carnell)
