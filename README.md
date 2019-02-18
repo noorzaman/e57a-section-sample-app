@@ -33,9 +33,20 @@ This TAG contains contents of v1 + Docker file, run script, and Maven Spotify Do
 
 ### Installing / Running
 
+Clone the latest (includes all functionality)
+```
+git clone https://github.com/LouisSavoldy/e57a-section-sample-app.git
+```
+
 You can then clone a specific TAG (e.g., -b v1 is for tag v1) with the following command:
 ```
 git clone -b v2 --single-branch https://github.com/LouisSavoldy/e57a-section-sample-app.git
+```
+
+#### Warning
+If downloading source on Windows, you will need to convert the run.sh file's line endings to Unix LF format.  Otherwise, you will get the following error when trying to run the docker image:
+```
+/bin/sh: ./run.sh: not found
 ```
 
 Create a Docker image
@@ -53,7 +64,7 @@ e-57a-section/sample-service     v2                  eaa68861fdd0        About a
 
 Start container from image
 ```
-docker run e-57a-section/sample-service:v2
+docker run -p 8080:8080 e-57a-section/sample-service:v2
 ```
 
 ## Authors
